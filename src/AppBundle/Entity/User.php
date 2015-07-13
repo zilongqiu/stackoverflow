@@ -47,7 +47,7 @@ class User implements UserInterface, \Serializable
     {
         // you *may* need a real salt depending on your encoder
         // see section on salt below
-        return null;
+        return;
     }
     public function getPassword()
     {
@@ -74,7 +74,7 @@ class User implements UserInterface, \Serializable
     /** @see \Serializable::unserialize() */
     public function unserialize($serialized)
     {
-        list (
+        list(
             $this->id,
             $this->username,
             $this->password,
@@ -83,49 +83,55 @@ class User implements UserInterface, \Serializable
             ) = unserialize($serialized);
     }
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
         return $this->id;
     }
     /**
-     * Set username
+     * Set username.
      *
      * @param string $username
+     *
      * @return User
      */
     public function setUsername($username)
     {
         $this->username = $username;
+
         return $this;
     }
     /**
-     * Set password
+     * Set password.
      *
      * @param string $password
+     *
      * @return User
      */
     public function setPassword($password)
     {
         $this->password = $password;
+
         return $this;
     }
     /**
-     * Set email
+     * Set email.
      *
      * @param string $email
+     *
      * @return User
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
         return $this;
     }
     /**
-     * Get email
+     * Get email.
      *
      * @return string
      */
@@ -134,20 +140,22 @@ class User implements UserInterface, \Serializable
         return $this->email;
     }
     /**
-     * Set isActive
+     * Set isActive.
      *
-     * @param boolean $isActive
+     * @param bool $isActive
+     *
      * @return User
      */
     public function setIsActive($isActive)
     {
         $this->isActive = $isActive;
+
         return $this;
     }
     /**
-     * Get isActive
+     * Get isActive.
      *
-     * @return boolean
+     * @return bool
      */
     public function getIsActive()
     {
