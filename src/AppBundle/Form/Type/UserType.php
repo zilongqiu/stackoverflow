@@ -16,12 +16,19 @@ class UserType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\User',
+            'attr' => array(
+                'novalidate' => 'novalidate',
+            )
         ));
+    }
+
+    public function getParent()
+    {
+        return 'fos_user_registration';
     }
 
     public function getName()
     {
-        return 'user';
+        return 'app_user_registration';
     }
 }
