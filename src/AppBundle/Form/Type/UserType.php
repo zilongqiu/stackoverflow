@@ -18,7 +18,7 @@ class UserType extends AbstractType
         $resolver->setDefaults(array(
             'attr' => array(
                 'novalidate' => 'novalidate',
-            )
+            ),
         ));
     }
 

@@ -23,7 +23,7 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use FOS\UserBundle\Model\UserInterface;
 
 /**
- * Controller managing the registration
+ * Controller managing the registration.
  *
  * @author Thibault Duplessis <thibault.duplessis@gmail.com>
  * @author Christophe Coevoet <stof@notk.org>
@@ -76,7 +76,7 @@ class RegistrationController extends Controller
     }
 
     /**
-     * Tell the user to check his email provider
+     * Tell the user to check his email provider.
      */
     public function checkEmailAction()
     {
@@ -94,7 +94,7 @@ class RegistrationController extends Controller
     }
 
     /**
-     * Receive the confirmation token from user email provider, login the user
+     * Receive the confirmation token from user email provider, login the user.
      */
     public function confirmAction(Request $request, $token)
     {
@@ -129,7 +129,7 @@ class RegistrationController extends Controller
     }
 
     /**
-     * Tell the user his account is now confirmed
+     * Tell the user his account is now confirmed.
      */
     public function confirmedAction()
     {
